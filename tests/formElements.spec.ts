@@ -1,6 +1,10 @@
 import test, { Locator } from "@playwright/test";
 
 test('form elements test',async({page})=>{
+
+
+
+    
     await page.goto("https://www.magupdate.co.uk/magazine-subscription/phrr");
 
     await page.getByRole('radio',{name:'I do not wish to receive FREE copies of HR Magazine regularly.'}).click();
