@@ -14,7 +14,8 @@ test('fetch cheapest flight',async ({page})=>{
     await page.getByRole('button',{name:'Done'}).click();
     //await page.keyboard.press('Tab');
     
-    //await page.getByRole('button',{name:'Search for flights'}).waitFor({state:"visible"});
-    await page.getByRole('button',{name:'Search for flights'}).click({});
+    //await page.getByRole('button',{name:'Search'}).waitFor({state:"visible"});
+    //await page.getByRole('button',{name:'Search'}).click();
+    await page.getByText('Search', { exact: true }).first().click();
     await page.pause();
 });
